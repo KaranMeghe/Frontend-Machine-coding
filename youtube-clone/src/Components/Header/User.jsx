@@ -1,8 +1,11 @@
+import { HiOutlineUserCircle } from "react-icons/hi2";
 
 
 const User = () => {
     return (
-        <div>User</div>
+        <div>
+            <HiOutlineUserCircle className="text-3xl" />
+        </div>
     );
 };
 

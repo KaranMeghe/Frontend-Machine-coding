@@ -1,7 +1,7 @@
-
+import { FcStart } from "react-icons/fc";
 const Logo = () => {
     return (
-        <div>Logo</div>
+        <FcStart className="text-4xl " />
     );
 };
 
