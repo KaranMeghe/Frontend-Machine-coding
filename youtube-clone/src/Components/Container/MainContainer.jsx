@@ -3,7 +3,7 @@ import { ButtonList, VideoContainer } from "../index";
 
 const MainContainer = () => {
     return (
-        <div className="w-5/6 border flex flex-col gap-2">
+        <div className="border col-span-80">
             <ButtonList />
             <VideoContainer />
         </div>
