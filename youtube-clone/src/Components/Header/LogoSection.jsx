@@ -6,7 +6,7 @@ const LogoSection = () => {
     const { handleToggleHamburger } = useHandleSideBar();
 
     return (
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center cursor-pointer">
             <RxHamburgerMenu className="text-3xl" onClick={handleToggleHamburger} />
             <Logo />
         </div>
