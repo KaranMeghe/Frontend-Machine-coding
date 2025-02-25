@@ -5,6 +5,7 @@ const videosSlice = createSlice({
     initialState: {
         loading: false,
         videos: null,
+        videoDetails: null,
         error: null,
     },
 
@@ -22,9 +23,13 @@ const videosSlice = createSlice({
         fetchVideosFailure: (state, action) => {
             state.loading = false;
             state.error = action.payload;
+        },
+
+        fetchVideoDetails: (state, action) => {
+            state.videoDetails = action.payload;
         }
     }
 });
 
-export const { fetchVideoStart, fetchVideoSuccess, fetchVideosFailure } = videosSlice.actions;
+export const { fetchVideoStart, fetchVideoSuccess, fetchVideosFailure, fetchVideoDetails } = videosSlice.actions;
 export const videoReducer = videosSlice.reducer;

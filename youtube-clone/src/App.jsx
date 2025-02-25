@@ -1,4 +1,5 @@
-import { Body, Header } from "./Components";
+import { Outlet } from "react-router-dom";
+import { Header, Body } from "./Components";
 
 function App() {
   return (

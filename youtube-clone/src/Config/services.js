@@ -11,3 +11,13 @@ export const FETCH_YOUTUBE_VIDEOS = async () => {
         console.error("Error Fetching Youtube Videos:", error);
     }
 };
+
+
+export const FETCH_VIDEO_DETAILS = async (videoId) => {
+    try {
+        const { data } = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`);
+        return data;
+    } catch (error) {
+        console.error("Error Fetching Youtube Video Information:", error);
+    }
+};
