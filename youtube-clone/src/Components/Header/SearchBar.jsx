@@ -9,22 +9,8 @@ import { fetchSearchData } from '../../Redux/store';
 
 const SearchBar = () => {
     const [searchQuery, setSearchQuery] = useState("");
-    const dispatch = useDispatch();
     const { searchData } = useSelector((state) => state.videos);
-
-
-    useSearchVideos(searchQuery);
-
-    const handleChange = (e) => {
-        setSearchQuery(e.target.value);
-
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSearchQuery("");
-        dispatch(fetchSearchData(null));
-    };
+    const { handleChange, handleSubmit } = useSearchVideos(searchQuery, setSearchQuery);
 
     return <form className='flex-col gap-4' onSubmit={handleSubmit}>
         <div className='flex gap-4'>

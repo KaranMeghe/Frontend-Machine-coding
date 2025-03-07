@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 
 
-const useSearchVideos = (searchQuery) => {
+const useSearchVideos = (searchQuery, setSearchQuery) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -25,6 +25,18 @@ const useSearchVideos = (searchQuery) => {
         getSearchResults();
 
     }, [searchQuery, dispatch]);
+
+    const handleChange = (e) => {
+        setSearchQuery(e.target.value);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSearchQuery("");
+        dispatch(fetchSearchData(null));
+    };
+
+    return { handleChange, handleSubmit };
 
 };
 
