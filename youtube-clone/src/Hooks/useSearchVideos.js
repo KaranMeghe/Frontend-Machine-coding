@@ -22,7 +22,11 @@ const useSearchVideos = (searchQuery, setSearchQuery) => {
             }
         };
 
-        getSearchResults();
+        const timer = setTimeout(() => {
+            getSearchResults();
+        }, 200);
+
+        return () => clearTimeout(timer);
 
     }, [searchQuery, dispatch]);
 
