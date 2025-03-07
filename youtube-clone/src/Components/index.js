@@ -8,5 +8,6 @@ import VideoCard from "./Container/VideoCard";
 import VideoDetails from "./Container/VideoDetails";
 import LogoSection from "./Header/LogoSection";
 import SearchBar from "./Header/SearchBar";
+import ShowSearchInput from "./Search/ShowSearchInput";
 import User from './Header/User';
-export { Header, SideBar, MainContainer, Body, ButtonList, VideoContainer, VideoCard, VideoDetails, LogoSection, SearchBar, User };
+export { Header, SideBar, MainContainer, Body, ButtonList, VideoContainer, VideoCard, VideoDetails, LogoSection, SearchBar, User, ShowSearchInput };
