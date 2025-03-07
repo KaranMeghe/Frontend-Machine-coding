@@ -6,7 +6,7 @@ const VideoDetails = () => {
     const videoData = useSelector((state) => state.videos.videoDetails);
     const videoDetails = videoData.items[0];
     const { snippet, statistics } = videoDetails;
-    console.log(videoDetails, snippet, statistics);
+
     return (
         <div className="col-span-80 overflow-hidden flex flex-col gap-5">
             <iframe width="1200" height="600"
