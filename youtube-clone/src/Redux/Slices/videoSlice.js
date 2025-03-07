@@ -8,6 +8,7 @@ const videosSlice = createSlice({
         videoDetails: null,
         error: null,
         searchData: null,
+
     },
 
     reducers: {
@@ -32,9 +33,10 @@ const videosSlice = createSlice({
 
         fetchSearchData: (state, action) => {
             state.searchData = action.payload;
-        }
+        },
+
     }
 });
 
-export const { fetchVideoStart, fetchVideoSuccess, fetchVideosFailure, fetchVideoDetails, fetchSearchData } = videosSlice.actions;
+export const { fetchVideoStart, fetchVideoSuccess, fetchVideosFailure, fetchVideoDetails, fetchSearchData, } = videosSlice.actions;
 export const videoReducer = videosSlice.reducer;

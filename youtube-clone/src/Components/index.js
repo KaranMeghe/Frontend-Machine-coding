@@ -10,4 +10,9 @@ import LogoSection from "./Header/LogoSection";
 import SearchBar from "./Header/SearchBar";
 import ShowSearchInput from "./Search/ShowSearchInput";
 import User from './Header/User';
-export { Header, SideBar, MainContainer, Body, ButtonList, VideoContainer, VideoCard, VideoDetails, LogoSection, SearchBar, User, ShowSearchInput };
+import CommentsContainer from "./Comments/CommentsContainer";
+import CommentsList from "./Comments/CommentsList";
+import Comment from "./Comments/Comment";
+
+
+export { Header, SideBar, MainContainer, Body, ButtonList, VideoContainer, VideoCard, VideoDetails, LogoSection, SearchBar, User, ShowSearchInput, CommentsContainer, Comment, CommentsList };

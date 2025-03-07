@@ -14,7 +14,8 @@ const useSearchVideos = (searchQuery, setSearchQuery) => {
 
             try {
                 const data = await FETCH_SEARCHED_VIDEOS(searchQuery);
-                return dispatch(fetchSearchData(data));
+                dispatch(fetchSearchData(data));
+
 
             } catch (error) {
                 console.log(error, "Error Fetching Searched Videos");
