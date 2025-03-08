@@ -31,7 +31,7 @@ const videosSlice = createSlice({
         },
 
         searchInput: (state, action) => {
-            state.searchQuery = action.payload;
+            state.searchQueryInput = action.payload;
         },
 
     }
