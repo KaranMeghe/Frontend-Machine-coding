@@ -28,7 +28,6 @@ const VideoDetails = () => {
                     ></iframe>
                 </div>
 
-                {/* ✅ Video Title */}
                 <div className="w-[90%] text-white text-xl font-semibold mt-4">
                     {snippet.title}
                 </div>
@@ -49,3 +48,5 @@ const VideoDetails = () => {
 };
 
 export default VideoDetails;
+
+<iframe width="1920" height="823" src="https://www.youtube.com/embed/6x8HVdS_TJs?list=RD6x8HVdS_TJs" title="The Bilz &amp; Kashif - Tere Nainon Mein" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>;

@@ -4,14 +4,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import useSearchVideos from '../../Hooks/useSearchVideos';
 import { ShowSearchInput } from '../../Components/index';
-import { fetchSearchData } from '../../Redux/store';
+import { searchInput } from '../../Redux/store';
 
 
 const SearchBar = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [showSuggestions, setShowSuggestions] = useState(false);
 
-    const { searchData } = useSelector((state) => state.videos);
+    const { searchQueryInput } = useSelector((state) => state.videos);
     const { handleChange, handleSubmit } = useSearchVideos(searchQuery, setSearchQuery);
 
     return <form className='flex-col gap-4' onSubmit={handleSubmit}>
@@ -23,7 +23,7 @@ const SearchBar = () => {
         </div>
 
         <div className='absolute top-16 w-2xl'>
-            {searchData && showSuggestions && <ShowSearchInput searchData={searchData} />}
+            {searchQuery && showSuggestions && <ShowSearchInput searchQueryInput={searchQuery} />}
         </div>
     </form>;
 };

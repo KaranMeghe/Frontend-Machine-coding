@@ -1,6 +1,6 @@
-import { FETCH_SEARCHED_VIDEOS } from "../Config/services";
+import { FETCH_SEARCHED_INPUT } from "../Config/services";
 import { useDispatch } from "react-redux";
-import { fetchSearchData } from "../Redux/store";
+import { searchInput } from "../Redux/store";
 import { useEffect } from "react";
 
 
@@ -13,8 +13,8 @@ const useSearchVideos = (searchQuery, setSearchQuery) => {
             if (!searchQuery.trim()) return;
 
             try {
-                const data = await FETCH_SEARCHED_VIDEOS(searchQuery);
-                dispatch(fetchSearchData(data));
+                const data = await FETCH_SEARCHED_INPUT(searchQuery);
+                dispatch(searchInput(data));
 
 
             } catch (error) {
@@ -38,7 +38,7 @@ const useSearchVideos = (searchQuery, setSearchQuery) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSearchQuery("");
-        dispatch(fetchSearchData(null));
+        dispatch(searchInput(null));
     };
 
     return { handleChange, handleSubmit };

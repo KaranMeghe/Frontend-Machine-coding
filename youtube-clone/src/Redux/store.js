@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { appReducer, toggleMenu, closeMenu } from './Slices/appSlice';
-import { videoReducer, fetchVideoStart, fetchVideoSuccess, fetchVideosFailure, fetchVideoDetails, fetchSearchData } from './Slices/videoSlice';
+import { videoReducer, fetchVideoStart, fetchVideoSuccess, fetchVideosFailure, fetchVideoDetails, searchInput } from './Slices/videoSlice';
 
 const store = configureStore({
     reducer: {
@@ -9,4 +9,4 @@ const store = configureStore({
     }
 });
 
-export { store, toggleMenu, closeMenu, fetchVideoStart, fetchVideoSuccess, fetchVideosFailure, fetchVideoDetails, fetchSearchData };
+export { store, toggleMenu, closeMenu, fetchVideoStart, fetchVideoSuccess, fetchVideosFailure, fetchVideoDetails, searchInput };

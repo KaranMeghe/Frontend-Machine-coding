@@ -3,6 +3,7 @@ import { FETCH_VIDEO_DETAILS } from "./services";
 
 export const videoDetailsLoader = async ({ params }) => {
     const { videoId } = params;
+    const { videQuery } = params;
 
     const existingVideoDetails = store.getState().videos.videoDetails;
     if (existingVideoDetails?.id === videoId) return existingVideoDetails;
