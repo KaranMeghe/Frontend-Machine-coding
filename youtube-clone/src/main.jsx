@@ -21,7 +21,7 @@ const appRouter = createBrowserRouter([
         path: "/watch/:videoId",
         element: <VideoDetails />,
         loader: videoDetailsLoader
-      }
+      },
     ]
   }
 ]);

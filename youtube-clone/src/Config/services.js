@@ -8,8 +8,6 @@ const YOUTUBE_VIDEO_API = `https://youtube.googleapis.com/youtube/v3/videos?part
 const YOUTUBE_SEARCH_INPUT_API = 'https://thingproxy.freeboard.io/fetch/https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=';
 
 
-
-
 export const FETCH_YOUTUBE_VIDEOS = async () => {
     try {
         const { data } = await axios.get(YOUTUBE_VIDEO_API);
@@ -47,12 +45,12 @@ export const FETCH_SEARCHED_INPUT = async (searchQuery) => {
 };
 
 
-export const FETCH_SEARCH_VIDEOS = async (searchQuery) => {
-    try {
-        const { data } = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchQuery}&key=${API_KEY}`);
-        return data;
-    } catch (error) {
-        console.error("Error Fetching Search Videos:", error);
-        return { error: true, message: "Failed to fetch search videos." };
-    }
-};
+// export const FETCH_SEARCH_VIDEOS = async (searchQuery) => {
+//     try {
+//         const { data } = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchQuery}&key=${API_KEY}`);
+//         return data;
+//     } catch (error) {
+//         console.error("Error Fetching Search Videos:", error);
+//         return { error: true, message: "Failed to fetch search videos." };
+//     }
+// };

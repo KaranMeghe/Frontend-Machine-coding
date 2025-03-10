@@ -13,6 +13,9 @@ import User from './Header/User';
 import CommentsContainer from "./Comments/CommentsContainer";
 import CommentsList from "./Comments/CommentsList";
 import Comment from "./Comments/Comment";
+import LiveChat from "./Chat/LiveChat";
+import ChatMessage from "./Chat/ChatMessage";
+import ChatInput from "./Chat/ChatInput";
 
 
-export { Header, SideBar, MainContainer, Body, ButtonList, VideoContainer, VideoCard, VideoDetails, LogoSection, SearchBar, User, ShowSearchInput, CommentsContainer, Comment, CommentsList };
+export { Header, SideBar, MainContainer, Body, ButtonList, VideoContainer, VideoCard, VideoDetails, LogoSection, SearchBar, User, ShowSearchInput, CommentsContainer, Comment, CommentsList, LiveChat, ChatMessage, ChatInput };

@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { usePlayVideo } from "../../Hooks/usePlayVideo";
-import { CommentsContainer } from "../index";
+import { CommentsContainer, LiveChat } from "../index";
 
 const VideoDetails = () => {
     const { videoId } = usePlayVideo();
@@ -14,7 +14,7 @@ const VideoDetails = () => {
     const { snippet } = videoDetails;
 
     return (
-        <div className="w-screen h-screen flex bg-black">
+        <div className="w-screen h-screen flex bg-black p-5">
             <div className="w-[75%] flex flex-col items-center">
                 <div className="w-[90%] h-[60vh] bg-black flex justify-center">
                     <iframe
@@ -40,13 +40,11 @@ const VideoDetails = () => {
             </div>
 
 
-            <div className="w-[25%] h-screen bg-gray-800 text-white p-4 flex items-center justify-center">
-                <p className="text-gray-400">Live Chat (Coming Soon...)</p>
+            <div className="w-[25%] h-[90vh]  text-white p-4 ">
+                <LiveChat />
             </div>
         </div>
     );
 };
 
 export default VideoDetails;
-
-<iframe width="1920" height="823" src="https://www.youtube.com/embed/6x8HVdS_TJs?list=RD6x8HVdS_TJs" title="The Bilz &amp; Kashif - Tere Nainon Mein" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>;

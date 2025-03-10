@@ -90,3 +90,9 @@ export const comments = [
         ]
     }
 ];
+
+export const liveChatMessages = Array.from({ length: 50 }, (_, i) => ({
+    username: `user${i + 1}`,
+    userId: `id${i + 1}`,
+    message: `This is message number ${i + 1}`
+}));

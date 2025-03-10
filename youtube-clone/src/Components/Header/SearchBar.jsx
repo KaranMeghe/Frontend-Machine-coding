@@ -1,9 +1,9 @@
 import { Input, Button } from '../../UI/index';
 import { CiSearch } from "react-icons/ci";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useState } from 'react';
-import useSearchVideos from '../../Hooks/useSearchVideos';
-import { ShowSearchInput } from '../../Components/index';
+import useSearchInput from '../../Hooks/useSearchInput';
+import { ShowSearchInput } from '../index';
 import { searchInput } from '../../Redux/store';
 
 
@@ -12,7 +12,7 @@ const SearchBar = () => {
     const [showSuggestions, setShowSuggestions] = useState(false);
 
     const { searchQueryInput } = useSelector((state) => state.videos);
-    const { handleChange, handleSubmit } = useSearchVideos(searchQuery, setSearchQuery);
+    const { handleChange, handleSubmit } = useSearchInput(searchQuery, setSearchQuery);
 
     return (
         <form className='flex-col gap-4' onSubmit={handleSubmit}>

@@ -8,6 +8,7 @@ const videosSlice = createSlice({
         videoDetails: null,
         error: null,
         searchQueryInput: null,
+        searchVideoDetails: null,
     },
 
     reducers: {
@@ -34,8 +35,12 @@ const videosSlice = createSlice({
             state.searchQueryInput = action.payload;
         },
 
-    }
+        searchVideoDetails: (state, action) => {
+            console.log("Updating Redux State:", action.payload);
+            state.searchVideoDetails = action.payload;
+        },
+    },
 });
 
-export const { fetchVideoStart, fetchVideoSuccess, fetchVideosFailure, fetchVideoDetails, searchInput, } = videosSlice.actions;
+export const { fetchVideoStart, fetchVideoSuccess, fetchVideosFailure, fetchVideoDetails, searchInput, searchVideoDetails } = videosSlice.actions;
 export const videoReducer = videosSlice.reducer;

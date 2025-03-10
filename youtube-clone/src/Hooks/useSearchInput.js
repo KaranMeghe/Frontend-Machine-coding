@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 
 
-const useSearchVideos = (searchQuery, setSearchQuery) => {
+const useSearchInput = (searchQuery, setSearchQuery) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -45,4 +45,4 @@ const useSearchVideos = (searchQuery, setSearchQuery) => {
 
 };
 
-export default useSearchVideos;
+export default useSearchInput;
