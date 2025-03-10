@@ -4,8 +4,8 @@ import useLiveChat from '../../Hooks/useLiveChat';
 
 const LiveChat = () => {
     const liveChatMessages = useSelector((state) => state.chats.messages);
-    useLiveChat();
-
+    const { handleFetchLiveChat } = useLiveChat();
+    handleFetchLiveChat();
     return (
         <div className='w-full h-full bg-gray-800 flex flex-col'>
             <div className='w-full h-full bg-gray-800 p-4 overflow-y-auto flex flex-col-reverse'>
